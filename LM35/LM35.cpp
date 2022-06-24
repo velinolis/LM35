@@ -6,6 +6,13 @@ LM35::LM35(int pinSensor) {
 }
 
 int LM35::readTemp() {
+  
+  /*
+  [(VCC*1000)/1024]/10 = 0.48828125
+  VCC = 5V
+  V to mV (*1000)
+  10mV = 1ºC
+*/
 
   int Celsius = analogRead(_pinSensor) * 0.48828125;
   //float Celsius = (analogRead(_pinSensor)*500)>>10;
@@ -13,7 +20,6 @@ int LM35::readTemp() {
 }
 
 void LM35::hotTemp(int temp) {
-
   if (readTemp() >= temp) {
     Serial.println("HT");
   } else {
@@ -30,9 +36,4 @@ void LM35::hotTemp(int temp) {
 
 
 
-/*
-  [(VCC*1000)/1024]/10 = 0.48828125
-  VCC = 5V
-  V to mV (*1000)
-  10mV = 1ºC
-*/
+
