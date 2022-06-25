@@ -1,20 +1,18 @@
 #ifndef LM35_H
 #define LM35_H
 
-
 class LM35
 {
   public:
 
-    LM35(int pinSensor);
+    LM35(int pinSensor, int pinNPN);
     int readTemp();
-    void hotTemp(int temp);
+    void Thermostate(int temp);
 
   private:
 
     int _pinSensor;
-
-
+    int _pinNPN;
 };
 
 #endif
