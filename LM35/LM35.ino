@@ -7,8 +7,7 @@ void setup() {
 }
 
 void loop() {
-  Serial.println(TS.readTemp());
-  delay(1000);
   TS.Thermostate(29);
+  Serial.println(TS.readTemp());
   delay(1000);
 }
