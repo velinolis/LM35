@@ -6,8 +6,8 @@ LM35::LM35(uint8_t pinSensor) {
   _pinSensor = pinSensor;
 }
 
-uint8_t LM35::SetMaxTemp(uint8_t lTemp) {
-  FAN_ACT = lTemp;
+uint8_t LM35::SetMaxTemp(uint8_t limitTemp) {
+  FAN_ACT = limitTemp;
 }
 
 uint8_t LM35::MaxTemp() {
