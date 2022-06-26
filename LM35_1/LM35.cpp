@@ -1,6 +1,8 @@
 #include "LM35.h"
 #include "Arduino.h"
 
+#define CONST_LM35 0.48828125
+
 LM35::LM35(uint8_t pinSensor) {
   pinMode(pinSensor, INPUT);
   _pinSensor = pinSensor;
@@ -23,7 +25,7 @@ uint8_t LM35::ReadTemp() {
     10mV = 1ºC
   */
 
-  uint8_t Celsius = analogRead(_pinSensor) * 0.48828125; //*500)>>10;
+  uint8_t Celsius = analogRead(_pinSensor) * CONST_LM35; //*500)>>10;
   return Celsius;
 }
 
