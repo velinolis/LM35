@@ -7,6 +7,7 @@ class LM35
   public:
 
     LM35(uint8_t pinSensor);
+    bool sensorLM35(bool SensorActive);
     uint8_t FAN_ACT;
     uint8_t SetMaxTemp(uint8_t limitTemp);
     uint8_t MaxTemp();
