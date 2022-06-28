@@ -7,9 +7,10 @@ void setup() {
 }
 
 void loop() {
-  TS.SetMaxTemp(28);
+  TS.sensorLM35(1);  
+  TS.SetMaxTemp(28); 
   Serial.println(TS.ReadTemp());
   Serial.println(TS.FanControl());
-  
   delay(1000);
 }
+
