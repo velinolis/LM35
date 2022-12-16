@@ -1,6 +1,6 @@
 #include "LM35.h"
-#include "Arduino.h"
 #include "Fast_DWR.h"
+#include "Arduino.h"
 
 /*
    [(VCC*1000)/1024]/10 = 0.48828125
